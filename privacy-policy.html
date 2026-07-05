@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <title>Privacy Policy | Auxantic</title>
+    <meta name="description"
+        content="Auxantic's Privacy Policy — how we collect, use, and protect your personal information.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "YOUR_CLARITY_PROJECT_ID");
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA4_ID', { anonymize_ip: true });
+    </script>
+
+    <style>
+        :root {
+            --bg-white: #ffffff;
+            --bg-gray: #f4f5f7;
+            --text-dark: #121214;
+            --text-muted: #6e6e73;
+            --brand-red: #ff3131;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --font-main: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            background: var(--bg-gray);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* ── NAV ── */
+        nav {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .logo-img-wrapper {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: -0.03em;
+            color: var(--text-dark);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-weight: 500;
+            font-size: 0.92rem;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 3px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--brand-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--brand-red);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+            letter-spacing: 0.01em;
+        }
+
+        .btn-primary {
+            background: var(--brand-red);
+            color: white;
+            box-shadow: 0 4px 16px rgba(255, 49, 49, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 49, 49, 0.4);
+        }
+
+        /* ── PAGE WRAPPER ── */
+        .page-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 140px 24px 100px;
+        }
+
+        /* ── HERO ── */
+        .doc-hero {
+            margin-bottom: 60px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .doc-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--brand-red);
+            margin-bottom: 16px;
+        }
+
+        .doc-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 3.2rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            margin-bottom: 20px;
+            color: var(--text-dark);
+        }
+
+        .doc-meta {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .doc-meta span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .doc-meta strong {
+            color: var(--text-dark);
+        }
+
+        /* ── CONTENT ── */
+        .doc-content {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .doc-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .doc-section-number {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--brand-red);
+            margin-bottom: 4px;
+        }
+
+        .doc-section h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .doc-section p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        .doc-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0;
+        }
+
+        .doc-section ul li {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .doc-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--brand-red);
+        }
+
+        .doc-section a {
+            color: var(--brand-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .doc-section a:hover {
+            text-decoration: underline;
+        }
+
+        /* Highlighted box */
+        .doc-highlight {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-left: 3px solid var(--brand-red);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .doc-highlight p {
+            color: var(--text-muted);
+            font-size: 0.97rem;
+        }
+
+        /* Contact box */
+        .doc-contact-box {
+            background: var(--text-dark);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .doc-contact-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .doc-contact-box p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+        }
+
+        .doc-contact-box a.btn {
+            margin-top: 8px;
+        }
+
+        /* Divider */
+        .doc-divider {
+            height: 1px;
+            background: rgba(0, 0, 0, 0.07);
+            border: none;
+            margin: 8px 0;
+        }
+
+        /* ── FOOTER ── */
+        .doc-footer-wrap {
+            background: var(--text-dark);
+            margin-top: 80px;
+        }
+
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 5% 32px;
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer-logo-wrapper {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .footer-logo span {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.6);
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.25s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.25s ease;
+        }
+
+        .social-icons a:hover {
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .social-icons svg {
+            width: 16px;
+            height: 16px;
+            fill: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-bottom a.active-page {
+            color: var(--brand-red);
+            font-weight: 600;
+        }
+
+        /* Hamburger */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 38px;
+            height: 38px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text-dark);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 20px 6%;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 999;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            padding: 14px 4px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--brand-red);
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none !important;
+            }
+
+            .hamburger {
+                display: flex !important;
+            }
+
+            .book-nav-btn {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page-wrapper {
+                padding: 120px 20px 80px;
+            }
+
+            .doc-hero h1 {
+                font-size: 2rem;
+            }
+
+            .doc-contact-box {
+                padding: 28px 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .doc-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-img-wrapper"><img src="sample.png" alt="Auxantic Logo"></div>
+            <span class="logo-text">Auxantic</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+            <a href="index.html#apply" class="btn btn-primary book-nav-btn"
+                style="padding:10px 24px;font-size:0.9rem;">Book Discovery</a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" onclick="closeMobileMenu()">Home</a>
+        <a href="index.html#about" onclick="closeMobileMenu()">About</a>
+        <a href="index.html#services" onclick="closeMobileMenu()">Services</a>
+        <a href="index.html#faq" onclick="closeMobileMenu()">FAQ</a>
+        <a href="index.html#contact" onclick="closeMobileMenu()">Contact</a>
+        <a href="index.html#apply" class="btn btn-primary" onclick="closeMobileMenu()"
+            style="margin-top:8px;text-align:center;">Book Discovery</a>
+    </div>
+
+
+    <!-- CONTENT -->
+    <div class="page-wrapper">
+
+        <div class="doc-hero">
+            <p class="doc-eyebrow">Legal</p>
+            <h1>Privacy Policy</h1>
+            <div class="doc-meta">
+                <span><strong>Effective Date:</strong> July 5, 2026</span>
+                <span><strong>Last Updated:</strong> July 5, 2026</span>
+                <span><strong>Company:</strong> Auxantic (under WAMZ Group)</span>
+            </div>
+        </div>
+
+        <div class="doc-content">
+
+            <div class="doc-highlight">
+                <p>Auxantic ("we", "our", "us") respects your privacy and is committed to protecting your personal
+                    information. This Privacy Policy explains how we collect, use, store, and safeguard the data you
+                    provide when visiting our website or engaging with our services. By using our website, you agree to
+                    the practices described in this policy.</p>
+            </div>
+
+            <!-- 1 -->
+            <div class="doc-section">
+                <p class="doc-section-number">01</p>
+                <h2>Information We Collect</h2>
+                <p>We collect information in two ways — information you give us directly, and information collected
+                    automatically when you use our website.</p>
+                <ul>
+                    <li><strong>Personal Information:</strong> Name, email address, website or social media URL, and any
+                        details you submit through our contact or booking forms.</li>
+                    <li><strong>Usage Information:</strong> Pages visited, actions taken on-site, session duration,
+                        scroll depth, and general interaction data.</li>
+                    <li><strong>Device & Technical Data:</strong> Browser type, operating system, screen resolution, IP
+                        address, and general geographic location derived from your IP.</li>
+                    <li><strong>Form Submissions:</strong> Any information you voluntarily submit via our enquiry or
+                        audit request forms, including service preferences and business details.</li>
+                    <li><strong>Cookies & Tracking Data:</strong> We use cookies and third-party analytics tools to
+                        understand how visitors interact with our site and to improve performance. You can control
+                        cookies through your browser settings.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 2 -->
+            <div class="doc-section">
+                <p class="doc-section-number">02</p>
+                <h2>How We Use Your Information</h2>
+                <p>We use the data we collect to operate and improve our business. Specifically, we use it to:</p>
+                <ul>
+                    <li>Respond to enquiries and audit requests submitted through our forms.</li>
+                    <li>Schedule discovery calls and communicate about our services.</li>
+                    <li>Improve our website's performance, content, and user experience.</li>
+                    <li>Understand how visitors navigate our site using aggregated, anonymised analytics data.</li>
+                    <li>Send service-related communications where you have expressly requested them.</li>
+                    <li>Comply with legal obligations where required.</li>
+                </ul>
+                <p>We do not sell, rent, or trade your personal data to any third party for marketing purposes.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 3 -->
+            <div class="doc-section">
+                <p class="doc-section-number">03</p>
+                <h2>Analytics & Tracking Tools</h2>
+                <p>We use the following third-party tools to analyse website usage and improve our services. Each tool
+                    processes data in accordance with its own privacy policy.</p>
+                <ul>
+                    <li><strong>Google Analytics (Google LLC):</strong> Tracks aggregated site traffic, page views, and
+                        visitor behaviour. IP anonymisation is enabled. Data is processed in accordance with Google's
+                        Privacy Policy. You may opt out via <a href="https://tools.google.com/dlpage/gaoptout"
+                            target="_blank" rel="noopener noreferrer">Google's opt-out browser add-on</a>.</li>
+                    <li><strong>Microsoft Clarity (Microsoft Corporation):</strong> Records anonymised session data
+                        including heatmaps and scroll behaviour to help us understand how users interact with our pages.
+                        Clarity does not track personally identifiable information. Data is governed by Microsoft's
+                        Privacy Statement.</li>
+                    <li><strong>Cloudflare (Cloudflare, Inc.):</strong> Provides security, performance optimisation, and
+                        DDoS protection for our website. Cloudflare may process request data (including IP addresses) as
+                        part of its content delivery and security services, subject to Cloudflare's Privacy Policy.</li>
+                </ul>
+                <p>These tools may use cookies or similar tracking technologies. You may manage cookie preferences
+                    through your browser settings at any time.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 4 -->
+            <div class="doc-section">
+                <p class="doc-section-number">04</p>
+                <h2>Form Processing & Third-Party Services</h2>
+                <p>Our contact and audit request forms are processed through <strong>Formspree</strong>, a third-party
+                    form backend service. Submissions you make are securely transmitted to Formspree's servers and
+                    forwarded to our team. Formspree processes data in accordance with its own privacy policy.</p>
+                <p>Discovery call scheduling is facilitated through <strong>Calendly</strong>. When you book a call,
+                    Calendly may collect your name, email address, and scheduling preferences. This data is subject to
+                    Calendly's Privacy Policy.</p>
+                <p>We only share with these services the data that is strictly necessary to provide their function. We
+                    do not authorise them to use your data for any other purpose.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 5 -->
+            <div class="doc-section">
+                <p class="doc-section-number">05</p>
+                <h2>Data Storage & Security</h2>
+                <p>We take reasonable and industry-standard measures to protect your personal data from unauthorised
+                    access, loss, misuse, or disclosure. These measures include:</p>
+                <ul>
+                    <li>Secure HTTPS transmission across our entire website.</li>
+                    <li>Use of trusted third-party service providers who are bound by contractual confidentiality and
+                        security obligations.</li>
+                    <li>Limiting access to personal data to only those team members who require it to perform their
+                        role.</li>
+                </ul>
+                <p>While we take every reasonable precaution, no method of transmission over the internet is completely
+                    secure. We cannot guarantee absolute security of your data.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 6 -->
+            <div class="doc-section">
+                <p class="doc-section-number">06</p>
+                <h2>How Long We Retain Your Data</h2>
+                <ul>
+                    <li>Form submissions and enquiry data are retained for a period necessary to respond to and fulfil
+                        your request, or as required by law.</li>
+                    <li>Analytics data (Google Analytics, Microsoft Clarity) is retained in accordance with each
+                        platform's default retention settings.</li>
+                    <li>You may request deletion of your personal data at any time by contacting us at <a
+                            href="mailto:info@auxantic.com">info@auxantic.com</a>.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 7 -->
+            <div class="doc-section">
+                <p class="doc-section-number">07</p>
+                <h2>Cookies</h2>
+                <p>Our website uses cookies — small text files stored on your device — to enhance your experience and
+                    enable analytics. The types of cookies we use include:</p>
+                <ul>
+                    <li><strong>Essential cookies:</strong> Required for the website to function correctly.</li>
+                    <li><strong>Analytics cookies:</strong> Used by Google Analytics and Microsoft Clarity to collect
+                        anonymised usage data.</li>
+                    <li><strong>Performance cookies:</strong> Used by Cloudflare to optimise page delivery and security.
+                    </li>
+                </ul>
+                <p>You can disable or delete cookies at any time through your browser settings. Please note that
+                    disabling certain cookies may affect the functionality of our website.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 8 -->
+            <div class="doc-section">
+                <p class="doc-section-number">08</p>
+                <h2>Your Rights</h2>
+                <p>Depending on your location and applicable law, you may have the following rights regarding your
+                    personal data:</p>
+                <ul>
+                    <li><strong>Right to Access:</strong> Request a copy of the personal data we hold about you.</li>
+                    <li><strong>Right to Rectification:</strong> Request correction of inaccurate or incomplete data.
+                    </li>
+                    <li><strong>Right to Erasure:</strong> Request deletion of your personal data.</li>
+                    <li><strong>Right to Restrict Processing:</strong> Request that we limit how we use your data.</li>
+                    <li><strong>Right to Object:</strong> Object to our processing of your data in certain
+                        circumstances.</li>
+                    <li><strong>Right to Data Portability:</strong> Request transfer of your data in a structured,
+                        machine-readable format.</li>
+                </ul>
+                <p>To exercise any of these rights, contact us at <a
+                        href="mailto:info@auxantic.com">info@auxantic.com</a>. We will respond within a reasonable
+                    timeframe and in accordance with applicable law.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 9 -->
+            <div class="doc-section">
+                <p class="doc-section-number">09</p>
+                <h2>Children's Privacy</h2>
+                <p>Our website and services are not directed to individuals under the age of 16. We do not knowingly
+                    collect personal data from minors. If we become aware that we have inadvertently collected such
+                    data, we will take immediate steps to delete it. If you believe we have collected data from a minor,
+                    please contact us at <a href="mailto:info@auxantic.com">info@auxantic.com</a>.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 10 -->
+            <div class="doc-section">
+                <p class="doc-section-number">10</p>
+                <h2>Links to Third-Party Sites</h2>
+                <p>Our website may contain links to external websites. We are not responsible for the privacy practices
+                    or content of those sites. We encourage you to review the privacy policies of any third-party sites
+                    you visit.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 11 -->
+            <div class="doc-section">
+                <p class="doc-section-number">11</p>
+                <h2>Changes to This Policy</h2>
+                <p>We may update this Privacy Policy from time to time to reflect changes in our practices, services, or
+                    applicable law. When we do, we will update the "Last Updated" date at the top of this page.
+                    Continued use of our website after such changes constitutes your acceptance of the revised policy.
+                    We encourage you to review this page periodically.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- Contact -->
+            <div class="doc-contact-box">
+                <h3>Questions about your privacy?</h3>
+                <p>We're here to help. Reach out directly and we'll respond promptly.</p>
+                <a href="mailto:info@auxantic.com" class="btn btn-primary">info@auxantic.com</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="doc-footer-wrap">
+        <footer>
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">
+                    <div class="footer-logo-wrapper"><img src="sample.png" alt="Auxantic Logo"></div>
+                    <span>Auxantic</span>
+                </a>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#faq">FAQ</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://x.com/Auxantic" aria-label="Twitter / X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 4.15H5.078z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/auxantic/" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/auxantic-inc-b85261419/" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@auxantic" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/@Auxantic" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Auxantic. All rights reserved.</div>
+                <div style="display:flex;gap:20px;">
+                    <a href="privacy-policy.html" class="active-page">Privacy Policy</a>
+                    <a href="terms-of-service.html">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('hamburgerBtn');
+            menu.classList.toggle('open');
+            btn.classList.toggle('open');
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.getElementById('hamburgerBtn').classList.remove('open');
+        }
+        document.addEventListener('click', function (e) {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('hamburgerBtn');
+            if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+
+</body>
+
+</html>

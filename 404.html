@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <title>404 | Lost in the Edit - Auxantic</title>
+    <style>
+        :root {
+            --bg-white: #ffffff;
+            --bg-gray: #f4f5f7;
+            --text-dark: #121214;
+            --text-muted: #6e6e73;
+            --brand-red: #ff3131;
+            --font-main: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --radius-xl: clamp(20px, 3vw, 32px);
+            --radius-lg: clamp(16px, 2.5vw, 24px);
+            --transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            background: var(--bg-gray);
+            line-height: 1.6;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            perspective: 1000px;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: clamp(10px, 2vw, 20px);
+            left: 50%;
+            transform: translateX(-50%);
+            width: 92%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(24px) saturate(180%);
+            -webkit-backdrop-filter: blur(24px) saturate(180%);
+            z-index: 1000;
+            padding: clamp(8px, 1.5vw, 12px) clamp(16px, 2.5vw, 24px);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: clamp(8px, 1vw, 12px);
+            cursor: pointer;
+        }
+
+        .logo-img-wrapper {
+            width: clamp(28px, 3.5vw, 36px);
+            height: clamp(28px, 3.5vw, 36px);
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transform: scale(1.1);
+        }
+
+        .logo-text {
+            font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: var(--text-dark);
+        }
+
+        .nav-actions .btn {
+            padding: 8px 20px;
+            font-size: 0.9rem;
+        }
+
+        /* BUTTONS */
+        .btn {
+            display: inline-block;
+            padding: clamp(12px, 1.5vw, 16px) clamp(24px, 3vw, 36px);
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: clamp(0.95rem, 1.2vw, 1.1rem);
+            cursor: pointer;
+            transition: var(--transition);
+            border: none;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .btn-primary {
+            background: var(--brand-red);
+            color: white;
+            box-shadow: 0 8px 24px rgba(255, 49, 49, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(255, 49, 49, 0.5);
+        }
+
+        /* MASSIVE ANIMATED 404 BACKGROUND */
+        .bg-404-container {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .huge-404 {
+            font-size: clamp(12rem, 35vw, 40rem);
+            font-weight: 900;
+            line-height: 0.8;
+            letter-spacing: -0.08em;
+            color: rgba(255, 49, 49, 0.18);
+            /* INCREASED VISIBILITY */
+            position: relative;
+            user-select: none;
+            white-space: nowrap;
+        }
+
+        /* NLE TIMELINE PLAYHEAD */
+        .playhead-container {
+            position: absolute;
+            top: -15%;
+            bottom: -15%;
+            left: 0;
+            width: 2px;
+            background: var(--brand-red);
+            box-shadow: 0 0 12px rgba(255, 49, 49, 0.6);
+            z-index: 2;
+            animation: scrub-timeline 5s cubic-bezier(0.4, 0, 0.2, 1) infinite alternate;
+        }
+
+        /* The pointed playhead cap */
+        .playhead-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -14px;
+            /* Centers the 30px cap over the 2px line */
+            width: 30px;
+            height: 24px;
+            background: var(--brand-red);
+            clip-path: polygon(0 0, 100% 0, 100% 60%, 50% 100%, 0 60%);
+        }
+
+        @keyframes scrub-timeline {
+            0% {
+                left: -5%;
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                left: 105%;
+                opacity: 0;
+            }
+        }
+
+        /* 3D FOREGROUND GLASS PANEL */
+        .content-wrapper {
+            position: relative;
+            z-index: 5;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(40px) saturate(180%);
+            -webkit-backdrop-filter: blur(40px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            border-radius: var(--radius-xl);
+            padding: 40px 30px;
+            /* TIGHTENED PADDING */
+            text-align: center;
+            max-width: 460px;
+            /* MADE CARD SMALLER */
+            width: 100%;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+            transform-style: preserve-3d;
+            will-change: transform;
+            transition: transform 0.1s ease-out;
+            position: relative;
+        }
+
+        .glass-card-inner {
+            transform: translateZ(50px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .glass-card h1 {
+            font-size: clamp(1.8rem, 4vw, 2.4rem);
+            margin-bottom: 12px;
+            color: var(--text-dark);
+            letter-spacing: -0.04em;
+        }
+
+        .glass-card p {
+            font-size: clamp(0.95rem, 1.5vw, 1.05rem);
+            color: var(--text-muted);
+            margin-bottom: 32px;
+            line-height: 1.6;
+        }
+
+        .glass-card .accent {
+            color: var(--brand-red);
+        }
+
+        /* THE WAVING GUY & SPEECH BUBBLE */
+        .character-container {
+            position: relative;
+            width: 110px;
+            height: 110px;
+            margin-bottom: 16px;
+        }
+
+        .speech-bubble {
+            position: absolute;
+            top: -20px;
+            right: -60px;
+            background: var(--text-dark);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            border-bottom-left-radius: 4px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+            animation: bounce-bubble 3s ease-in-out infinite;
+            white-space: nowrap;
+        }
+
+        @keyframes bounce-bubble {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-8px);
+            }
+        }
+
+        .svg-guy {
+            width: 100%;
+            height: 100%;
+            overflow: visible;
+        }
+
+        .arm {
+            transform-origin: 65px 60px;
+            animation: wave 2.5s infinite ease-in-out;
+        }
+
+        .eyes {
+            animation: blink 4s infinite;
+        }
+
+        @keyframes wave {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            20% {
+                transform: rotate(25deg);
+            }
+
+            40% {
+                transform: rotate(-15deg);
+            }
+
+            60% {
+                transform: rotate(20deg);
+            }
+
+            80% {
+                transform: rotate(-10deg);
+            }
+        }
+
+        @keyframes blink {
+
+            0%,
+            96%,
+            100% {
+                transform: scaleY(1);
+            }
+
+            98% {
+                transform: scaleY(0.1);
+            }
+        }
+
+        /* LIQUID GLASS BUBBLES */
+        #bubbles-container {
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            z-index: 2;
+            overflow: hidden;
+        }
+
+        .bubble {
+            position: absolute;
+            border-radius: 50%;
+            background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.05));
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            animation: float-bubble linear infinite;
+        }
+
+        @keyframes float-bubble {
+            0% {
+                transform: translateY(110vh) scale(0.8) rotate(0deg);
+                opacity: 0;
+            }
+
+            15% {
+                opacity: 1;
+            }
+
+            85% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-20vh) scale(1.2) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .huge-404 {
+                font-size: 50vw;
+            }
+
+            .speech-bubble {
+                right: -30px;
+                font-size: 0.75rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Liquid Glass Bubbles -->
+    <div id="bubbles-container"></div>
+
+    <!-- Liquid Nav -->
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-img-wrapper">
+                <img src="SMAPLE.png" alt="Auxantic Logo">
+            </div>
+            <span class="logo-text">Auxantic</span>
+        </a>
+        <div class="nav-actions">
+            <a href="index.html#apply" class="btn btn-primary">Book Discovery</a>
+        </div>
+    </nav>
+
+    <!-- Massive Animated 404 with NLE Playhead -->
+    <div class="bg-404-container">
+        <div class="huge-404">
+            404
+            <div class="playhead-container"></div>
+        </div>
+    </div>
+
+    <!-- 3D Interactive Glass Card -->
+    <div class="content-wrapper">
+        <div class="glass-card" id="tilt-card">
+            <div class="glass-card-inner">
+
+                <!-- The Waving Editor Guy -->
+                <div class="character-container">
+                    <div class="speech-bubble">Hello? Anyone there?</div>
+                    <svg class="svg-guy" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <!-- Shadow -->
+                        <ellipse cx="50" cy="95" rx="30" ry="5" fill="rgba(0,0,0,0.1)" />
+                        <!-- Body -->
+                        <rect x="35" y="55" width="30" height="35" rx="10" fill="var(--text-dark)" />
+                        <rect x="35" y="55" width="30" height="15" rx="5" fill="var(--brand-red)" />
+                        <!-- Head -->
+                        <circle cx="50" cy="35" r="18" fill="var(--text-dark)" />
+                        <circle cx="50" cy="35" r="14" fill="#ffffff" />
+                        <!-- Blinking Eyes -->
+                        <g class="eyes" transform-origin="50px 35px">
+                            <circle cx="44" cy="35" r="3" fill="var(--text-dark)" />
+                            <circle cx="56" cy="35" r="3" fill="var(--text-dark)" />
+                        </g>
+                        <!-- Left Arm (Static) -->
+                        <path d="M 35 60 Q 20 70 25 85" stroke="var(--text-dark)" stroke-width="8"
+                            stroke-linecap="round" fill="none" />
+                        <!-- Right Arm (Waving) -->
+                        <g class="arm">
+                            <path d="M 65 60 Q 85 45 90 25" stroke="var(--brand-red)" stroke-width="8"
+                                stroke-linecap="round" fill="none" />
+                            <!-- Hand -->
+                            <circle cx="90" cy="25" r="6" fill="var(--text-dark)" />
+                        </g>
+                    </svg>
+                </div>
+
+                <h1>This frame <span class="accent">didn't make the cut.</span></h1>
+                <p>The page you're looking for was either deleted, moved, or left on the cutting room floor. Let's get
+                    you back to the main sequence.</p>
+                <a href="auxantic-updated-checking.html" class="btn btn-primary">Return to Homepage</a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // 1. Liquid Glass Bubbles Generator
+        function createBubbles() {
+            const container = document.getElementById('bubbles-container');
+            const bubbleCount = window.innerWidth < 600 ? 10 : 20;
+
+            for (let i = 0; i < bubbleCount; i++) {
+                let bubble = document.createElement('div');
+                bubble.className = 'bubble';
+
+                bubble.style.left = Math.random() * 100 + 'vw';
+
+                let size = Math.random() * 60 + 20;
+                bubble.style.width = size + 'px';
+                bubble.style.height = size + 'px';
+
+                bubble.style.animationDuration = (Math.random() * 10 + 15) + 's';
+                bubble.style.animationDelay = (Math.random() * 15) + 's';
+
+                container.appendChild(bubble);
+            }
+        }
+        window.addEventListener('DOMContentLoaded', createBubbles);
+
+        // 2. Interactive 3D Magnetic Tilt Effect
+        const card = document.getElementById('tilt-card');
+        const wrapper = document.querySelector('.content-wrapper');
+
+        if (window.matchMedia("(pointer: fine)").matches) {
+            wrapper.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+
+                const x = e.clientX - (rect.left + rect.width / 2);
+                const y = e.clientY - (rect.top + rect.height / 2);
+
+                const rotateX = (y / (rect.height / 2)) * -12;
+                const rotateY = (x / (rect.width / 2)) * 12;
+
+                card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+            });
+
+            wrapper.addEventListener('mouseleave', () => {
+                card.style.transition = 'transform 0.6s cubic-bezier(0.25, 1, 0.5, 1)';
+                card.style.transform = `perspective(1000px) rotateX(0deg) rotateY(0deg)`;
+
+                setTimeout(() => {
+                    card.style.transition = 'transform 0.1s ease-out';
+                }, 600);
+            });
+        }
+    </script>
+</body>
+
+</html>

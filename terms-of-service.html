@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, minimum-scale=1.0">
+    <title>Terms of Service | Auxantic</title>
+    <meta name="description"
+        content="Auxantic's Terms of Service — the terms and conditions governing use of our services.">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+
+    <!-- Microsoft Clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+            t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+            y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+        })(window, document, "clarity", "script", "YOUR_CLARITY_PROJECT_ID");
+    </script>
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_ID"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'YOUR_GA4_ID', { anonymize_ip: true });
+    </script>
+
+    <style>
+        :root {
+            --bg-white: #ffffff;
+            --bg-gray: #f4f5f7;
+            --text-dark: #121214;
+            --text-muted: #6e6e73;
+            --brand-red: #ff3131;
+            --radius-lg: 20px;
+            --radius-xl: 28px;
+            --font-main: -apple-system, BlinkMacSystemFont, "San Francisco", "Helvetica Neue", Helvetica, Arial, sans-serif;
+            --transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-main);
+            color: var(--text-dark);
+            background: var(--bg-gray);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        nav {
+            position: fixed;
+            top: 16px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: calc(100% - 40px);
+            max-width: 1200px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 14px 24px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-dark);
+        }
+
+        .logo-img-wrapper {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .logo-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-weight: 800;
+            font-size: 1.1rem;
+            letter-spacing: -0.03em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            font-weight: 500;
+            font-size: 0.92rem;
+        }
+
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            position: relative;
+            padding-bottom: 3px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 1.5px;
+            background: var(--brand-red);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: var(--brand-red);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px 28px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            cursor: pointer;
+            border: none;
+            transition: var(--transition);
+            letter-spacing: 0.01em;
+        }
+
+        .btn-primary {
+            background: var(--brand-red);
+            color: white;
+            box-shadow: 0 4px 16px rgba(255, 49, 49, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(255, 49, 49, 0.4);
+        }
+
+        .page-wrapper {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 140px 24px 100px;
+        }
+
+        .doc-hero {
+            margin-bottom: 60px;
+            padding-bottom: 48px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+        }
+
+        .doc-eyebrow {
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--brand-red);
+            margin-bottom: 16px;
+        }
+
+        .doc-hero h1 {
+            font-size: clamp(2.4rem, 5vw, 3.2rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1.05;
+            margin-bottom: 20px;
+        }
+
+        .doc-meta {
+            display: flex;
+            gap: 28px;
+            flex-wrap: wrap;
+        }
+
+        .doc-meta span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        .doc-meta strong {
+            color: var(--text-dark);
+        }
+
+        .doc-content {
+            display: flex;
+            flex-direction: column;
+            gap: 48px;
+        }
+
+        .doc-section {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .doc-section-number {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            color: var(--brand-red);
+            margin-bottom: 4px;
+        }
+
+        .doc-section h2 {
+            font-size: 1.35rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            color: var(--text-dark);
+            margin-bottom: 4px;
+        }
+
+        .doc-section p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+        }
+
+        .doc-section ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding: 0;
+        }
+
+        .doc-section ul li {
+            font-size: 1rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .doc-section ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 11px;
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: var(--brand-red);
+        }
+
+        .doc-section a {
+            color: var(--brand-red);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .doc-section a:hover {
+            text-decoration: underline;
+        }
+
+        .doc-highlight {
+            background: white;
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            border-left: 3px solid var(--brand-red);
+            border-radius: var(--radius-lg);
+            padding: 24px 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+        }
+
+        .doc-highlight p {
+            color: var(--text-muted);
+            font-size: 0.97rem;
+        }
+
+        .doc-warning-box {
+            background: rgba(255, 49, 49, 0.05);
+            border: 1px solid rgba(255, 49, 49, 0.15);
+            border-left: 3px solid var(--brand-red);
+            border-radius: var(--radius-lg);
+            padding: 22px 26px;
+        }
+
+        .doc-warning-box p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .doc-warning-box strong {
+            color: var(--text-dark);
+        }
+
+        .doc-contact-box {
+            background: var(--text-dark);
+            border-radius: var(--radius-xl);
+            padding: 40px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .doc-contact-box h3 {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .doc-contact-box p {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.95rem;
+        }
+
+        .doc-contact-box a.btn {
+            margin-top: 8px;
+        }
+
+        .doc-divider {
+            height: 1px;
+            background: rgba(0, 0, 0, 0.07);
+            border: none;
+            margin: 8px 0;
+        }
+
+        .doc-footer-wrap {
+            background: var(--text-dark);
+            margin-top: 80px;
+        }
+
+        footer {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 5% 32px;
+            color: white;
+        }
+
+        .footer-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-bottom: 40px;
+        }
+
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: white;
+            cursor: pointer;
+        }
+
+        .footer-logo-wrapper {
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .footer-logo-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .footer-logo span {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 32px;
+            font-weight: 500;
+            color: rgba(255, 255, 255, 0.6);
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: rgba(255, 255, 255, 0.6);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.25s ease;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-icons a {
+            width: 38px;
+            height: 38px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.08);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.25s ease;
+        }
+
+        .social-icons a:hover {
+            background: rgba(255, 255, 255, 0.16);
+        }
+
+        .social-icons svg {
+            width: 16px;
+            height: 16px;
+            fill: rgba(255, 255, 255, 0.7);
+        }
+
+        .footer-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding-top: 28px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-bottom a {
+            color: rgba(255, 255, 255, 0.4);
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .footer-bottom a:hover {
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .footer-bottom a.active-page {
+            color: var(--brand-red);
+            font-weight: 600;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 38px;
+            height: 38px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background: var(--text-dark);
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger.open span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .hamburger.open span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.open span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 70px;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.97);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 20px 6%;
+            flex-direction: column;
+            gap: 4px;
+            z-index: 999;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            padding: 14px 4px;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--text-dark);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            text-decoration: none;
+        }
+
+        .mobile-menu a:last-child {
+            border-bottom: none;
+        }
+
+        .mobile-menu a:hover {
+            color: var(--brand-red);
+        }
+
+        @media (max-width: 900px) {
+            .nav-links {
+                display: none !important;
+            }
+
+            .hamburger {
+                display: flex !important;
+            }
+
+            .book-nav-btn {
+                display: none !important;
+            }
+        }
+
+        @media (max-width: 640px) {
+            .page-wrapper {
+                padding: 120px 20px 80px;
+            }
+
+            .doc-hero h1 {
+                font-size: 2rem;
+            }
+
+            .doc-contact-box {
+                padding: 28px 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 24px;
+            }
+
+            .footer-links {
+                flex-direction: column;
+                gap: 14px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .doc-meta {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="logo">
+            <div class="logo-img-wrapper"><img src="sample.png" alt="Auxantic Logo"></div>
+            <span class="logo-text">Auxantic</span>
+        </a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="index.html#about">About</a>
+            <a href="index.html#services">Services</a>
+            <a href="index.html#faq">FAQ</a>
+            <a href="index.html#contact">Contact</a>
+        </div>
+        <div style="display:flex;align-items:center;gap:14px;">
+            <a href="index.html#apply" class="btn btn-primary book-nav-btn"
+                style="padding:10px 24px;font-size:0.9rem;">Book Discovery</a>
+            <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" onclick="toggleMobileMenu()">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="index.html" onclick="closeMobileMenu()">Home</a>
+        <a href="index.html#about" onclick="closeMobileMenu()">About</a>
+        <a href="index.html#services" onclick="closeMobileMenu()">Services</a>
+        <a href="index.html#faq" onclick="closeMobileMenu()">FAQ</a>
+        <a href="index.html#contact" onclick="closeMobileMenu()">Contact</a>
+        <a href="index.html#apply" class="btn btn-primary" onclick="closeMobileMenu()"
+            style="margin-top:8px;text-align:center;">Book Discovery</a>
+    </div>
+
+    <div class="page-wrapper">
+
+        <div class="doc-hero">
+            <p class="doc-eyebrow">Legal</p>
+            <h1>Terms of Service</h1>
+            <div class="doc-meta">
+                <span><strong>Effective Date:</strong> July 5, 2026</span>
+                <span><strong>Last Updated:</strong> July 5, 2026</span>
+                <span><strong>Company:</strong> Auxantic (under WAMZ Group)</span>
+            </div>
+        </div>
+
+        <div class="doc-content">
+
+            <div class="doc-highlight">
+                <p>Please read these Terms of Service ("Terms") carefully before using the Auxantic website or engaging
+                    our services. By accessing our website or entering into a service agreement with us, you acknowledge
+                    that you have read, understood, and agree to be bound by these Terms. If you do not agree, please do
+                    not use our services.</p>
+            </div>
+
+            <!-- 1 -->
+            <div class="doc-section">
+                <p class="doc-section-number">01</p>
+                <h2>About Auxantic</h2>
+                <p>Auxantic is a premium content creation and social media management agency operating under WAMZ Group,
+                    with offices in the United States and Pakistan. We provide services including but not limited to
+                    video editing, social media management, UGC production, graphic design, and content strategy to
+                    clients primarily in the USA, UK, UAE, and Europe.</p>
+                <p>These Terms govern your use of our website at auxantic.com and any service agreements entered into
+                    between you ("Client") and Auxantic ("we", "us", "our").</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 2 -->
+            <div class="doc-section">
+                <p class="doc-section-number">02</p>
+                <h2>Eligibility & Account Responsibility</h2>
+                <ul>
+                    <li>You must be at least 18 years of age and have the legal authority to enter into a binding
+                        agreement to use our services.</li>
+                    <li>If you are entering into these Terms on behalf of a company or organisation, you represent that
+                        you have the authority to do so.</li>
+                    <li>You are responsible for ensuring that all information provided to Auxantic is accurate, current,
+                        and complete.</li>
+                    <li>You are responsible for maintaining the confidentiality of any account credentials and for all
+                        activity conducted under your account or engagement.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 3 -->
+            <div class="doc-section">
+                <p class="doc-section-number">03</p>
+                <h2>Services</h2>
+                <p>Auxantic provides content creation, video editing, social media management, and related services as
+                    agreed upon in individual service proposals or contracts ("Service Agreement"). The specific scope,
+                    deliverables, timelines, and pricing will be outlined in your Service Agreement.</p>
+                <ul>
+                    <li>We reserve the right to modify, update, or discontinue any service offering at any time, with
+                        reasonable notice where possible.</li>
+                    <li>Auxantic does not guarantee specific outcomes including follower growth, engagement rates, or
+                        revenue results from our services. Results depend on a variety of factors including market
+                        conditions, platform algorithms, and client cooperation.</li>
+                    <li>We may use third-party tools, platforms, or subcontractors to fulfil service delivery. All such
+                        parties are bound by appropriate confidentiality and quality obligations.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 4 -->
+            <div class="doc-section">
+                <p class="doc-section-number">04</p>
+                <h2>Client Responsibilities</h2>
+                <p>To enable us to deliver services effectively, you agree to:</p>
+                <ul>
+                    <li>Provide timely access to any assets, accounts, brand guidelines, or materials required to
+                        deliver the agreed services.</li>
+                    <li>Review and approve deliverables within the timeframes specified in your Service Agreement.
+                        Delays in approvals may impact delivery schedules.</li>
+                    <li>Ensure that all content, materials, and information you provide to Auxantic do not infringe upon
+                        any third-party intellectual property rights, and that you have the legal right to use and share
+                        them.</li>
+                    <li>Communicate changes to your requirements promptly and through agreed channels.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 5 -->
+            <div class="doc-section">
+                <p class="doc-section-number">05</p>
+                <h2>Payments & Billing</h2>
+                <ul>
+                    <li>Service fees are as set out in your individual Service Agreement or proposal. All fees are
+                        quoted in USD unless otherwise stated.</li>
+                    <li>Payment terms, schedules, and methods will be specified in your Service Agreement. Auxantic
+                        reserves the right to pause service delivery if payments are not received by the agreed due
+                        dates.</li>
+                    <li>Invoices not paid within the agreed timeframe may incur a late payment fee or result in
+                        suspension of services.</li>
+                    <li>You are responsible for any applicable taxes, duties, or charges associated with your purchase
+                        depending on your location.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 6 -->
+            <div class="doc-section">
+                <p class="doc-section-number">06</p>
+                <h2>Refund Policy</h2>
+                <div class="doc-warning-box">
+                    <p><strong>All payments made to Auxantic are non-refundable unless otherwise expressly stated in
+                            your Service Agreement.</strong> Given the nature of creative and agency services, work
+                        begins upon agreement and resources are committed accordingly. We do not offer refunds for
+                        completed deliverables, partial service periods, or dissatisfaction with subjective creative
+                        output.</p>
+                </div>
+                <p>If you have a concern about the quality of work delivered, we encourage you to contact us at <a
+                        href="mailto:info@auxantic.com">info@auxantic.com</a> and we will work in good faith to address
+                    the issue within the scope of your agreement.</p>
+                <p>Exceptions to this policy, if any, will be explicitly stated in writing in your individual Service
+                    Agreement prior to engagement.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 7 -->
+            <div class="doc-section">
+                <p class="doc-section-number">07</p>
+                <h2>Intellectual Property</h2>
+                <ul>
+                    <li><strong>Your Content:</strong> You retain full ownership of all content, materials, and assets
+                        you provide to Auxantic. By providing them, you grant us a limited licence to use them solely
+                        for the purpose of delivering the agreed services.</li>
+                    <li><strong>Delivered Work:</strong> Upon receipt of full payment, ownership of final deliverables
+                        produced specifically for you transfers to you, unless otherwise agreed in your Service
+                        Agreement.</li>
+                    <li><strong>Auxantic IP:</strong> Our website, brand, methodologies, templates, tools, and processes
+                        remain the exclusive intellectual property of Auxantic and WAMZ Group. Nothing in these Terms
+                        transfers ownership of Auxantic's IP to you.</li>
+                    <li><strong>Portfolio Rights:</strong> Unless you expressly request otherwise in writing prior to
+                        engagement, Auxantic reserves the right to showcase completed work in our portfolio, case
+                        studies, or marketing materials.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 8 -->
+            <div class="doc-section">
+                <p class="doc-section-number">08</p>
+                <h2>Confidentiality</h2>
+                <p>Both parties agree to keep confidential any proprietary or sensitive information shared during the
+                    course of the engagement that is identified as confidential or that a reasonable person would
+                    understand to be confidential in nature.</p>
+                <ul>
+                    <li>Auxantic will not disclose your business information, strategy, or content to any third party
+                        except as required to deliver the agreed services or as required by law.</li>
+                    <li>This obligation survives the termination of any service agreement.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 9 -->
+            <div class="doc-section">
+                <p class="doc-section-number">09</p>
+                <h2>Cancellation & Termination</h2>
+                <ul>
+                    <li>Either party may terminate a service agreement by providing written notice as specified in that
+                        agreement.</li>
+                    <li>You remain liable for payment of all fees for services rendered up to and including the date of
+                        termination.</li>
+                    <li>Auxantic may terminate or suspend services immediately and without liability if you breach these
+                        Terms, fail to make required payments, or engage in conduct that is unlawful or harmful.</li>
+                    <li>Upon termination, each party will return or destroy the other's confidential materials as
+                        reasonably practicable.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 10 -->
+            <div class="doc-section">
+                <p class="doc-section-number">10</p>
+                <h2>Acceptable Use</h2>
+                <p>By using our website or services, you agree not to:</p>
+                <ul>
+                    <li>Use our services for any unlawful, harmful, fraudulent, or deceptive purpose.</li>
+                    <li>Submit or request content that is abusive, defamatory, obscene, discriminatory, or that
+                        infringes third-party intellectual property rights.</li>
+                    <li>Attempt to reverse engineer, copy, resell, or redistribute any part of Auxantic's services,
+                        tools, or methodologies without prior written consent.</li>
+                    <li>Interfere with or disrupt the security, integrity, or performance of our website or systems.
+                    </li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 11 -->
+            <div class="doc-section">
+                <p class="doc-section-number">11</p>
+                <h2>Disclaimers</h2>
+                <p>Our website and services are provided on an "as is" and "as available" basis without warranties of
+                    any kind, either express or implied.</p>
+                <ul>
+                    <li>We do not guarantee that our website will be uninterrupted, error-free, or free from viruses or
+                        other harmful components.</li>
+                    <li>We do not guarantee specific results from our services, including but not limited to follower
+                        growth, engagement rates, sales conversions, or search rankings.</li>
+                    <li>Any third-party tools or platforms referenced or used as part of our services are subject to
+                        their own terms and we make no warranty regarding them.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 12 -->
+            <div class="doc-section">
+                <p class="doc-section-number">12</p>
+                <h2>Limitation of Liability</h2>
+                <p>To the maximum extent permitted by applicable law, Auxantic's total liability to you for any claim
+                    arising out of or relating to these Terms or your use of our services shall not exceed the total
+                    amount you have paid us in the three (3) months preceding the claim.</p>
+                <p>In no event shall Auxantic be liable for any indirect, incidental, special, consequential, or
+                    punitive damages, including but not limited to loss of profits, loss of data, loss of business, or
+                    reputational harm, even if we have been advised of the possibility of such damages.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 13 -->
+            <div class="doc-section">
+                <p class="doc-section-number">13</p>
+                <h2>Governing Law & Disputes</h2>
+                <p>These Terms shall be governed by and construed in accordance with the laws of the State of Wyoming,
+                    United States, without regard to its conflict of law provisions.</p>
+                <p>Any dispute arising out of or in connection with these Terms shall first be attempted to be resolved
+                    through good-faith negotiation. If unresolved within 30 days, the parties agree to binding
+                    arbitration or the appropriate courts of competent jurisdiction.</p>
+                <p>For billing or service concerns, please first contact us directly at <a
+                        href="mailto:info@auxantic.com">info@auxantic.com</a> — we are committed to resolving issues
+                    quickly and fairly.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 14 -->
+            <div class="doc-section">
+                <p class="doc-section-number">14</p>
+                <h2>Third-Party Tools & Platforms</h2>
+                <p>Our website and services make use of the following third-party tools, each governed by their own
+                    terms and privacy policies:</p>
+                <ul>
+                    <li><strong>Google Analytics</strong> — website usage analytics.</li>
+                    <li><strong>Microsoft Clarity</strong> — session recording and heatmapping for UX improvement.</li>
+                    <li><strong>Cloudflare</strong> — website security, performance, and CDN delivery.</li>
+                    <li><strong>Formspree</strong> — secure form submission processing.</li>
+                    <li><strong>Calendly</strong> — discovery call scheduling.</li>
+                </ul>
+                <p>We are not responsible for the practices of these third-party services. Your use of our website
+                    constitutes acknowledgment that these tools may be active.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 15 -->
+            <div class="doc-section">
+                <p class="doc-section-number">15</p>
+                <h2>Changes to These Terms</h2>
+                <p>We may update these Terms from time to time. When we do, we will revise the "Last Updated" date at
+                    the top of this page. We encourage you to review these Terms periodically. Continued use of our
+                    website or services after changes are posted constitutes your acceptance of the revised Terms.</p>
+                <p>For material changes that affect ongoing service agreements, we will notify affected clients directly
+                    via email.</p>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- 16 -->
+            <div class="doc-section">
+                <p class="doc-section-number">16</p>
+                <h2>Grievance & Complaints</h2>
+                <p>We take client satisfaction seriously. If you have a concern or complaint:</p>
+                <ul>
+                    <li>Contact us at <a href="mailto:info@auxantic.com">info@auxantic.com</a> with a description of
+                        your concern.</li>
+                    <li>We will acknowledge your complaint within 24–48 business hours and provide a reference for
+                        tracking.</li>
+                    <li>Simple issues will be resolved within 3 working days. Complex matters within 7–14 working days,
+                        with updates provided if more time is required.</li>
+                    <li>All grievances are logged and reviewed to improve our service standards.</li>
+                </ul>
+            </div>
+
+            <hr class="doc-divider">
+
+            <!-- Contact -->
+            <div class="doc-contact-box">
+                <h3>Questions about these Terms?</h3>
+                <p>We're here to clarify anything. Reach out and we'll respond promptly.</p>
+                <a href="mailto:info@auxantic.com" class="btn btn-primary">info@auxantic.com</a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="doc-footer-wrap">
+        <footer>
+            <div class="footer-content">
+                <a href="index.html" class="footer-logo">
+                    <div class="footer-logo-wrapper"><img src="sample.png" alt="Auxantic Logo"></div>
+                    <span>Auxantic</span>
+                </a>
+                <div class="footer-links">
+                    <a href="index.html">Home</a>
+                    <a href="index.html#about">About</a>
+                    <a href="index.html#services">Services</a>
+                    <a href="index.html#faq">FAQ</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="social-icons">
+                    <a href="https://x.com/Auxantic" aria-label="Twitter / X">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.008 4.15H5.078z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/auxantic/" aria-label="Instagram">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/auxantic-inc-b85261419/" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.tiktok.com/@auxantic" aria-label="TikTok">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.youtube.com/channel/UCWl_5VHfW-YA-JX7agYAYYg" aria-label="YouTube">
+                        <svg viewBox="0 0 24 24">
+                            <path
+                                d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>&copy; 2026 Auxantic. All rights reserved.</div>
+                <div style="display:flex;gap:20px;">
+                    <a href="privacy-policy.html">Privacy Policy</a>
+                    <a href="terms-of-service.html" class="active-page">Terms of Service</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function toggleMobileMenu() {
+            document.getElementById('mobileMenu').classList.toggle('open');
+            document.getElementById('hamburgerBtn').classList.toggle('open');
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobileMenu').classList.remove('open');
+            document.getElementById('hamburgerBtn').classList.remove('open');
+        }
+        document.addEventListener('click', function (e) {
+            const menu = document.getElementById('mobileMenu');
+            const btn = document.getElementById('hamburgerBtn');
+            if (menu.classList.contains('open') && !menu.contains(e.target) && !btn.contains(e.target)) {
+                closeMobileMenu();
+            }
+        });
+    </script>
+
+</body>
+
+</html>
