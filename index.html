@@ -8,7 +8,7 @@
     <!--                                                               -->
 
 <meta http-equiv="Content-Security-Policy"
-    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: https:; frame-src https://calendly.com; connect-src 'self' https://formspree.io https://calendly.com https://api.calendly.com https://assets.calendly.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
+    content="default-src 'self'; script-src 'self' 'unsafe-inline' https://assets.calendly.com https://www.clarity.ms https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://assets.calendly.com; img-src 'self' data: https:; frame-src https://calendly.com; connect-src 'self' https://formspree.io https://calendly.com https://api.calendly.com https://assets.calendly.com https://www.clarity.ms https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; object-src 'none'; base-uri 'self'; form-action 'self' https://formspree.io;">
 
     <meta name="referrer" content="strict-origin-when-cross-origin">
     <!-- ------------------------------------------------------------------ -->
@@ -19,8 +19,9 @@
 <link rel="icon" type="image/png" sizes="192x192" href="android-chrome-192x192.png">
 <link rel="icon" type="image/png" sizes="512x512" href="android-chrome-512x512.png">
 <link rel="manifest" href="site.webmanifest">
+    
     <!-- Microsoft Clarity -->
-  <script type="text/javascript">
+    <script type="text/javascript">
         (function(c,l,a,r,i,t,y){
             c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
             t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
@@ -28,13 +29,13 @@
         })(window, document, "clarity", "script", "xhy2dy84nd");
     </script>
 
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_GA4_ID"></script>
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DJ81FSCG5S"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', 'YOUR_GA4_ID', { anonymize_ip: true });
+        gtag('config', 'G-DJ81FSCG5S', { anonymize_ip: true });
     </script>
     <!-- ------------------------------------------------------------------ -->
     <style>
@@ -2460,7 +2461,7 @@
                 <div class="vtc-track" id="vtcTrack">
                     <div class="vtc-card" data-index="0">
                         <div class="vtc-video-wrap">
-                            <video src="TESTIMONIAL-1 POORNIMA.mp4" poster="testimonial-1-thumb.jpg" loop playsinline
+                            <video src="TESTIMONIAL-1-POORNIMA.mp4" poster="testimonial-1-thumb.jpg" loop playsinline
                                 preload="auto"></video>
                             <div class="vtc-play-btn" onclick="vtcTogglePlay(this)">
                                 <div class="vtc-icon-circle">
@@ -2498,7 +2499,7 @@
                     </div>
                     <div class="vtc-card" data-index="2">
                         <div class="vtc-video-wrap">
-                            <video src="yao-banto-testimonial-3-1.mp4" poster="yao banto testimonial-image.jpg" loop playsinline
+                            <video src="yao-banto-testimonial-3-1.mp4" poster="yao-banto-testimonial-image.jpg" loop playsinline
                                 preload="auto"></video>
                             <div class="vtc-play-btn" onclick="vtcTogglePlay(this)">
                                 <div class="vtc-icon-circle">
